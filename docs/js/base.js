@@ -231,7 +231,7 @@ function updateHistoryTable() {
         totalsRow.innerHTML = `
             <td>TOTALES</td>
             <td>-</td>
-            <td>-</td>
+            <td>$${formatNumber(totals.totalIncomeSum)}</td>
             <td>$${formatNumber(totals.totalExpensesSum)}</td>
             <td>$${formatNumber(totals.totalSavingsSum)}</td>
             <td>$${formatNumber(totals.totalBalanceSum)}</td>
