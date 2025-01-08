@@ -338,6 +338,10 @@ footer p {
     margin: 0;
 }
 
+.nav-buttons {
+    display: none;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
