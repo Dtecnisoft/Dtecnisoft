@@ -5,6 +5,8 @@ document.querySelector('.menu-toggle').addEventListener('click', function () {
     menuItems.style.display = menuItems.style.display === 'block' ? 'none' : 'block';
 });
 
+
+//funcion cerrar menu
 // Cerrar menú al hacer clic en cualquier parte de la aplicación
 document.addEventListener('click', function (event) {
     const menuItems = document.querySelector('.menu-items');
