@@ -1,0 +1,200 @@
+/* Custom Styles for Dtecnisoft */
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Blue and White Theme */
+:root {
+    --primary-color: #0081fa;
+    --secundary-color: #002763;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --white-color: #ffffff;
+    --black-color: #000;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--secundary-color);
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+body {
+    font-family: 'Rajdhani', 'Verdana', sans-serif; /* Estilo tech/cyber */
+}
+
+/* Navbar */
+.navbar-dark .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-dark .nav-link {
+    color: #000;
+}
+
+.navbar-dark,
+.navbar-dark {
+    color: var(--black-color);
+}
+
+.nav-link {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Empieza desde el centro */
+    width: 0;
+    height: 3px;
+    background: var(--secundary-color);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    left: 0; /* Se expande desde la izquierda */
+    width: 100%;
+}
+
+.navbar-toggler {
+    background-color: var(--secundary-color);
+}
+
+.nav-item .active {
+    color: var(--secundary-color) !important;
+    background-color: transparent !important;
+    position: relative;
+}
+
+.nav-item .active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px; /* Más grueso que el hover */
+    background-color: var(--secundary-color);
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scaleX(0); }
+    to { opacity: 1; transform: scaleX(1); }
+}
+
+/* Hero Section - Carousel */
+#heroCarousel .carousel-item {
+    height: 80vh;
+    /* Adjust height as needed */
+    min-height: 400px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
+
+#heroCarousel .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    /* Make image cover the item area */
+    filter: brightness(0.7);
+    /* Darken image slightly for text readability */
+}
+
+#heroCarousel .carousel-caption {
+    bottom: 20%;
+    /* Position caption vertically */
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Optional: slight background for better readability */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#heroCarousel .carousel-caption h1,
+#heroCarousel .carousel-caption p {
+    color: var(--white-color);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    /* Add shadow for better contrast */
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+}
+
+#servicios .card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#servicios .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+#nosotros svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+.social-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 576px) {
+    .social-icon {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* Bootstrap Overrides (Optional) */
+.btn-primary {
+    background-color: var(--secundary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.text-primary {
+    color: var(--secundary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--secundary-color) !important;
+}
+
+.bg-light {
+    background-color: var(--light-color) !important;
+}
